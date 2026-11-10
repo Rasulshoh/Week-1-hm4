@@ -1,214 +1,225 @@
-﻿
-//TAsk 1 
-// int n = int.Parse(Console.ReadLine());
+﻿// int a = int.Parse(Console.ReadLine());
+// int b = int.Parse(Console.ReadLine());
 
-// Console.WriteLine("EVEN:" + EvenCount(n));
-// Console.WriteLine("Odd:" + OddCount(n) );
-// Console.WriteLine("Digit:" + DigitCount(n));
-// Console.WriteLine("Sum:" + Sumdigit(n) );
+// Console.WriteLine(IsDivisible(a, b).ToString().ToLower());
 
-// int EvenCount(int n){
-//     int count = 0 ;
-//      for ( ; n > 0 ; n /= 10)
+// bool IsDivisible(int a, int b)
+// {
+//     return a % b == 0;
+// }
+
+// int a = int.Parse(Console.ReadLine());
+
+//  Console.WriteLine(GetNumberType(a));
+
+//  string GetNumberType(int a){
+//     if(a % 2 == 0)
 //     {
-//         if((n % 10 ) % 2 ==0)
-//          count++;
+//         return "Even";
+//     }
+//      else
+//     {
+//         return "Odd";
+//     }
+//  }
+// task 3
+// int a = int.Parse(Console.ReadLine());
+// int b = int.Parse(Console.ReadLine());
+
+// Console.WriteLine(CountNumbers(a, b));
+
+// int CountNumbers(int a, int b)
+// {
+//     int min = a;
+//     int max = b;
+//     if (a > b)
+//     {
+//       min = b;
+//  max = a;
+//     }
+
+//     int count = 0;
+//     for (int i = min + 1; i < max; i++)
+//     {
+//        count++;
 //     }
 //     return count;
 // }
-//  int OddCount (int n)
-// {
-//     int count = 0 ;
-//     for ( ; n > 0 ; n /= 10)
-//     {
-//         if((n % 10 ) % 2 !=0)
-//           count++;
-//     }
-//      return count ;
-     
-// }
-//  int DigitCount(int n){
-//     int count = 0 ;
-//      for ( ; n > 0 ; n /= 10)
-//     {
-//         count ++ ;
-//     }
-//      return count ;
-//  }
-//   int Sumdigit(int n)
-// {
-//     int sum = 0 ;
-//      for( ; n > 0 ; n /=10)
-//     {
-//         sum += n % 10 ;
-//     }
-//      return sum ; 
-// }
- 
- //Task 2 ;
-  
-//   int a = int.Parse(Console.ReadLine());
-//   int b = int.Parse(Console.ReadLine());
-
-//   Console.WriteLine("Add:" + Add(a, b));
-//   Console.WriteLine("Subtract:" + Subtract(a, b));
-//   Console.WriteLine("Multiply:" + Multiply(a, b));
-//   Console.WriteLine("Division:" + Division(a, b)); 
-
-//    int Add (int a , int b)
-// {
-//     return a + b; 
-// }
-//  int Subtract ( int a , int b ){
-//     return a -b ;
-//  }
-  
-//    int Multiply ( int a , int b)
-// {
-//     return a * b ;
-// }
- 
-//   int Division ( int a , int b)
-// {
-//     return a / b ;
-// }
-
-//Task 3;
-
-// int n = int.Parse(Console.ReadLine());
-
-//  int min  = MinDigit(n);
-//  int max = MaxDigit(n);
-
-//  Console.WriteLine(min + " + " + max + " = " + (min+max));
-
-//  int MinDigit( int n)
-// {
-//     int min = 9 ;
-//      for ( ;  n > 0 ; n/=10){
-//         int d = n % 10 ;
-//          if( d < min) min = d ;
-//      }
-//       return min;
-// }
- 
-//   int MaxDigit(int n ){
-
-//      int max = 0 ;
-//       for( ; n > 0 ; n /= 10)
-//     {
-//         int d = n % 10;
-//          if(d > max) max= d ;
-//     }
-//      return max;
-//   }
-
-// task 4
-
-// int x = int.Parse(Console.ReadLine());
-// int y = int.Parse(Console.ReadLine());
-
-// Console.WriteLine(POW(x , y));
-
-// int POW(int x , int y){
-//     int r = 1;
-//     for(int i=0 ; i< y ; i++ )
-//     {
-//         r *= x;
-
-//     }
-//      return r;
-// }
-
-//Task 5 ;
-
-// int x = int.Parse(Console.ReadLine());
-// int y = int.Parse(Console.ReadLine());
-
-// Swap(ref x, ref y);
-
-// Console.WriteLine(x);
-// Console.WriteLine(y);
-
-// void Swap(ref int a, ref int b)
-// {
-//     int temp = a;
-//     a = b;
-//     b = temp;
-// }
-
-//Task 6
-
-// int n = int.Parse(Console.ReadLine());
-
-// Divisor(n);
- 
-//   int Divisor(int n){
-//     for (int i = 1 ; i <= n ; i++)
-//     {
-//         if( n % i == 0)
-//         {
-//             Console.Write(i + " ");
-//         }
-//     }
-//      return 0;
-//   }
-
-
-//task 8
+// task4
 // int a = int.Parse(Console.ReadLine());
+// Console.WriteLine(SumFromOne(a));
+
+// int SumFromOne(int a)
+// {
+//     int sum = 0;
+//     for (int i = 1; i <= a; i++)
+//     {
+//         sum += i;
+//     }
+//     return sum;
+// }
+
+// task 5 
+// int a = int.Parse(Console.ReadLine());
+
+// Console.WriteLine(Factorial(a));
+
+// int Factorial(int a)
+// {
+//     int res = 1;
+//     for (int i = 1; i <= a; i++)
+//     {
+//         res *= i;
+//     }
+//     return res;
+// }
+
+// task 6
+
+
+// int a = int.Parse(Console.ReadLine());
+
+// Console.WriteLine(ReverseNumber(a));
+
+// int ReverseNumber(int a)
+// {
+//     int s = 0;
+//     while (a > 0)
+//     {
+//         s = s * 10 + a % 10;
+//         a /= 10;
+//     }
+//     return s;
+// }
+
+//  int a = int.Parse(Console.ReadLine());
+// System.Console.WriteLine(Rass(a));
+
+// int Rass(int a)
+// {
+//     int s=0;
+//     for(int i=a ; i>0 ; i/=10)s++;
+//     return s;
+// }
+
+
+
+//hmtk1
+
+
+// int n = int.Parse(Console.ReadLine());
+// Print(1, n);
+// Console.WriteLine();
+
+// void Print(int i, int n)
+// {
+//     if (i > n) return;
+
+//     Console.Write(i);
+//     if (i < n) Console.Write(" ");
+
+//     Print(i + 1, n);
+// }
+
+
+//hmtk2
+
+// int n = int.Parse(Console.ReadLine());
+// Print(n);
+// Console.WriteLine();
+
+// void Print(int i)
+// {
+//     if (i < 1) return;
+
+//     Console.Write(i);
+//     if (i > 1) Console.Write(" ");
+
+//     Print(i - 1);
+// }
+
+//hmtk3
+
+
+// int n = int.Parse(Console.ReadLine());
+// Console.WriteLine(Sum(n));
+
+// int Sum(int i)
+// {
+//     if (i <= 0) return 0;
+
+//     return i + Sum(i - 1);
+// }
+
+
+//
+//hmtk4
+
+// int n = int.Parse(Console.ReadLine());
+// Clas(n);
+// Console.WriteLine();
+
+// void Clas(int x)
+// {
+//     if (x == 0) return;
+
+//     Clas(x / 10); 
+//     Console.Write(x % 10 + " ");
+// }
+
+//hmtk5
+
+// int n = int.Parse(Console.ReadLine());
+// Console.WriteLine(CountDigits(n) + " ");
+
+// int Rass(int x)
+// {
+//     if (x == 0) return 0;
+
+//     return 1 + Rass(x / 10);
+// }
+
+//hmtk6
+
+// int n=int.Parse(Console.ReadLine());
+
+// Console.WriteLine(IsEven(n));
+
+// bool IsEven(int n){
+//     return n%2==0;
+
+// }
+
+//task7
+// int a=int.Parse(Console.ReadLine());
 // int b = int.Parse(Console.ReadLine());
 // int c = int.Parse(Console.ReadLine());
-// int d = int.Parse(Console.ReadLine());
 
-// Console.WriteLine(MinNumber(a , b , c , d));
+// Console.WriteLine(Max3(a , b, c));
 
-// int MinNumber (int a , int b , int c ,int d)
-// {
-//     int min = a ;
-//     if( b < min) min = b ;
-//     if (c < min ) min = c ;
-//      if (d < min) min = d ;
-//      return min ;
+// int Max3(int a , int b , int c){
+//     int max = a;
+//     if(b > max) max=b;
+//     if( c > max) max = c;
+
+//     return max;
 // }
 
-//task 9 ;
-// int a = int.Parse(Console.ReadLine());
-//  int b = int.Parse(Console.ReadLine());
+//task8
+// int n = int.Parse(Console.ReadLine());
+// Console.WriteLine(SumOfDigits(n));
 
-//  Console.WriteLine(Min(a , b ));
+// int SumOfDigits(int number)
+// {
+//     int sum = 0;
 
-//  int Min(int a , int b){
-//     if(a < b ){
-//         return a;
-//     }
-//     else
+//     for (; number != 0; number /= 10)
 //     {
-//         return b ;
-//     } 
-
+//         sum += Math.Abs(number % 10);
 //     }
 
-//task 10 ;
-int a = int.Parse(Console.ReadLine());
- int b = int.Parse(Console.ReadLine());
-
- Console.WriteLine(Max(a , b ));
-
- int Max(int a , int b){
-    if(a > b ){
-        return a;
-    }
-    else
-    {
-        return b ;
-    } 
-
-    }
+//     return sum;
+// }
 
 
-
- 
-
-
- 
+//task9
