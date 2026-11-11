@@ -1,225 +1,450 @@
-﻿// int a = int.Parse(Console.ReadLine());
-// int b = int.Parse(Console.ReadLine());
-
-// Console.WriteLine(IsDivisible(a, b).ToString().ToLower());
-
-// bool IsDivisible(int a, int b)
-// {
-//     return a % b == 0;
-// }
-
-// int a = int.Parse(Console.ReadLine());
-
-//  Console.WriteLine(GetNumberType(a));
-
-//  string GetNumberType(int a){
-//     if(a % 2 == 0)
-//     {
-//         return "Even";
-//     }
-//      else
-//     {
-//         return "Odd";
-//     }
-//  }
-// task 3
-// int a = int.Parse(Console.ReadLine());
-// int b = int.Parse(Console.ReadLine());
-
-// Console.WriteLine(CountNumbers(a, b));
-
-// int CountNumbers(int a, int b)
-// {
-//     int min = a;
-//     int max = b;
-//     if (a > b)
-//     {
-//       min = b;
-//  max = a;
-//     }
-
-//     int count = 0;
-//     for (int i = min + 1; i < max; i++)
-//     {
-//        count++;
-//     }
-//     return count;
-// }
-// task4
-// int a = int.Parse(Console.ReadLine());
-// Console.WriteLine(SumFromOne(a));
-
-// int SumFromOne(int a)
-// {
-//     int sum = 0;
-//     for (int i = 1; i <= a; i++)
-//     {
-//         sum += i;
-//     }
-//     return sum;
-// }
-
-// task 5 
-// int a = int.Parse(Console.ReadLine());
-
-// Console.WriteLine(Factorial(a));
-
-// int Factorial(int a)
-// {
-//     int res = 1;
-//     for (int i = 1; i <= a; i++)
-//     {
-//         res *= i;
-//     }
-//     return res;
-// }
-
-// task 6
-
-
-// int a = int.Parse(Console.ReadLine());
-
-// Console.WriteLine(ReverseNumber(a));
-
-// int ReverseNumber(int a)
-// {
-//     int s = 0;
-//     while (a > 0)
-//     {
-//         s = s * 10 + a % 10;
-//         a /= 10;
-//     }
-//     return s;
-// }
-
-//  int a = int.Parse(Console.ReadLine());
-// System.Console.WriteLine(Rass(a));
-
-// int Rass(int a)
-// {
-//     int s=0;
-//     for(int i=a ; i>0 ; i/=10)s++;
-//     return s;
-// }
-
-
-
-//hmtk1
-
-
-// int n = int.Parse(Console.ReadLine());
-// Print(1, n);
-// Console.WriteLine();
-
-// void Print(int i, int n)
-// {
-//     if (i > n) return;
-
-//     Console.Write(i);
-//     if (i < n) Console.Write(" ");
-
-//     Print(i + 1, n);
-// }
-
-
-//hmtk2
-
-// int n = int.Parse(Console.ReadLine());
-// Print(n);
-// Console.WriteLine();
-
-// void Print(int i)
-// {
-//     if (i < 1) return;
-
-//     Console.Write(i);
-//     if (i > 1) Console.Write(" ");
-
-//     Print(i - 1);
-// }
-
-//hmtk3
-
-
-// int n = int.Parse(Console.ReadLine());
-// Console.WriteLine(Sum(n));
-
-// int Sum(int i)
-// {
-//     if (i <= 0) return 0;
-
-//     return i + Sum(i - 1);
-// }
-
-
+﻿
 //
-//hmtk4
-
-// int n = int.Parse(Console.ReadLine());
-// Clas(n);
-// Console.WriteLine();
-
-// void Clas(int x)
-// {
-//     if (x == 0) return;
-
-//     Clas(x / 10); 
-//     Console.Write(x % 10 + " ");
-// }
-
-//hmtk5
-
-// int n = int.Parse(Console.ReadLine());
-// Console.WriteLine(CountDigits(n) + " ");
-
-// int Rass(int x)
-// {
-//     if (x == 0) return 0;
-
-//     return 1 + Rass(x / 10);
-// }
-
-//hmtk6
-
-// int n=int.Parse(Console.ReadLine());
-
-// Console.WriteLine(IsEven(n));
-
-// bool IsEven(int n){
-//     return n%2==0;
-
-// }
-
-//task7
-// int a=int.Parse(Console.ReadLine());
+// int a = int.Parse(Console.ReadLine());
 // int b = int.Parse(Console.ReadLine());
 // int c = int.Parse(Console.ReadLine());
 
-// Console.WriteLine(Max3(a , b, c));
+// Console.WriteLine(FindMid(a , b , c));
 
-// int Max3(int a , int b , int c){
+// int FindMid(int a, int b, int c){
+
 //     int max = a;
 //     if(b > max) max=b;
-//     if( c > max) max = c;
-
+//     if(c<max) max=c;
 //     return max;
 // }
 
-//task8
-// int n = int.Parse(Console.ReadLine());
-// Console.WriteLine(SumOfDigits(n));
+//task2
 
-// int SumOfDigits(int number)
-// {
-//     int sum = 0;
+//  int a = int.Parse(Console.ReadLine());
+//  int b = int.Parse(Console.ReadLine());
 
-//     for (; number != 0; number /= 10)
+//   Console.WriteLine(hama(a , b));
+
+//   bool hama(int a , int b){
+//     if(a > 0 && b > 0)
 //     {
-//         sum += Math.Abs(number % 10);
+//         return true;
+//     }
+//      return false;
+//   }
+
+// task 3
+
+//   int n = int.Parse(Console.ReadLine());
+
+// Console.WriteLine(NON(n));
+
+// int NON(int n)
+// {
+//     n = Math.Abs(n);
+//     int c = 0;
+//     for (int t = n; t > 0; t /= 10)
+//     {
+//         c++;
+//     }
+//     for (int i = 0; i < c / 2; i++)
+//     {
+//         n /= 10;
+//     }
+//     return n % 10;
+// }
+
+//
+
+
+//  string name = Console.ReadLine();
+
+//   Console.WriteLine(Lengt(name));
+
+//   string Lengt(string name)
+// {
+//     string f=0;
+//     for(int i=name ; i > 0 ; i--)
+//     {
+//         f=i;
+
+//         if( name == f){
+//              return truel;
+//         }
+//         else
+//         {
+//             return false;
+//             // Console.WriteLine("Not Palidrom");
+
+//         }
 //     }
 
+
+
+
+
+
+// }
+
+// string name = Console.ReadLine();
+
+// Console.WriteLine(Lengt(name));
+
+// bool Lengt(string name)
+// {
+//     string rev = "";
+//     for (int i = name.Length - 1; i >= 0; i--)
+//     {
+//         rev += name[i];
+//     }
+//     return name == rev;
+// }
+
+//
+
+// int n = int.Parse(Console.ReadLine());
+
+// Console.WriteLine(End(n));
+
+// int End(int n)
+// {
+//     int c =0;
+//     for( ; n > 0 ; n /= 10)
+//     {
+//         c+=n%10;
+//     }
+//     return c;
+// }
+
+//
+
+// string name = Console.ReadLine();
+// Console.WriteLine(len(name));
+
+// string len(string name){
+//     string rev = "";
+//     for(int i=name.Length-1  ; i >=0 ; i-- ){
+//         rev+=name[i];
+//     }
+//       return rev;
+// }
+
+//
+
+// Console.WriteLine(PowN(5 , 3));
+
+// int PowN(int a , int n){
+//     if( n == 0)
+//     {
+//         return 1;
+// //     }
+// //      return a*PowN(a , n-1);
+// // }
+
+// //
+
+// int n = int.Parse(Console.ReadLine());
+
+// for (int i = 0; i < n; i++)
+// {
+//     Console.Write(Fib(i) + " ");
+// }
+
+// int Fib(int k)
+// {
+//     if (k == 0) return 0;
+//     if (k == 1) return 1;
+//     return Fib(k - 1) + Fib(k - 2);
+// }
+
+//hmt1
+// int n = int.Parse(Console.ReadLine());
+// Console.WriteLine("Even : " + EvenCount(n));
+// Console.WriteLine("Odd : " + OddCount(n));
+// Console.WriteLine("Zero : " + ZeroCount(n));
+// Console.WriteLine("Digits :" + DigitCount(n));
+// Console.WriteLine("Min : " + MinDigit(n));
+// Console.WriteLine("Max : " + MaxDigit(n));
+// Console.WriteLine("Sum : " + SumDigit(n));
+
+// int EvenCount(int n)
+// {
+//     n = Math.Abs(n);
+//     int c = 0;
+//     for (; n > 0; n /= 10)
+//     {
+//         if (n % 10 % 2 == 0)
+//         {
+//             c++;
+//         }
+//     }
+//     return c;
+// }
+
+// int OddCount(int n)
+// {
+//     n = Math.Abs(n);
+//     int c = 0;
+//     for (; n > 0; n /= 10)
+//     {
+//         if (n % 10 % 2 != 0)
+//         {
+//             c++;
+//         }
+//     }
+//     return c;
+// }
+
+// int ZeroCount(int n)
+// {
+//     n = Math.Abs(n);
+//     if (n == 0) return 1;
+//     int c = 0;
+//     for (; n > 0; n /= 10)
+//     {
+//         if (n % 10 == 0)
+//         {
+//             c++;
+//         }
+//     }
+//     return c;
+// }
+
+// int DigitCount(int n)
+// {
+//     n = Math.Abs(n);
+//     if (n == 0) return 1;
+//     int c = 0;
+//     for (; n > 0; n /= 10)
+//     {
+//         c++;
+//     }
+//     return c;
+// }
+
+// int MinDigit(int n){
+//     n=Math.Abs(n);
+//     int min = 9;
+//     if(n==0)return 0;
+//     for(; n>0 ; n/=10){
+//         if(n%10 < min){
+//             min=n%10;
+//         }
+
+//     }
+//      return min;
+// }
+ 
+//   int MaxDigit(int n){
+//     n=Math.Abs(n);
+//     int max=0;
+//     if(n==0)return 0;
+//     for( ; n > 0 ; n /=10){
+//         if(n % 10 > max){
+//             max=n%10;
+//         }
+
+//     }
+//      return max;
+//   }
+//   int SumDigit(int n){
+//     n=Math.Abs(n);
+//     if(n==0)return 0;
+//     int sum=0;
+//     for(; n > 0 ; n /= 10 ){
+//          sum+=n%10;
+//     }
 //     return sum;
+//   }
+
+//2
+// int n = int.Parse(Console.ReadLine());
+//  System.Console.WriteLine(CheckGrade(n));
+// char CheckGrade(int n){
+//     if( n>=90 && n >= 100){
+//         return 'A';
+//     }
+//      else if( n >=80){
+//         return 'B';
+//      }
+//       else if(n >= 70){
+//         return 'C';
+//       }
+//       else if(n >=60){
+//         return 'D';
+//       }
+//       else {
+//         return 'F';
+//       }
+     
+// }
+
+//3
+// int n = int.Parse(Console.ReadLine());
+
+// int[] arr = new int [n];
+// for(int i = 0 ; i< n ; i++){
+//    arr[i]=int.Parse(Console.ReadLine());
+
+// }
+//   int neg = 0 , pos= 0 , zer = 0 , eve=0, odd = 0  , sum = 0 ;
+//  int max = arr[0];
+//  int min = arr[0];
+//  for(int i = 0 ; i < n ; i++){
+//     int x=arr[i];
+//     if(x<0)neg++;
+//     else if(x>0)pos++;
+//     else zer++;
+
+//     if( x % 2 ==0) eve++;
+//     else odd++;
+
+//     if(x > max) max = x;
+//     if( x < min) min = x ;
+//     sum+=x;
+
+//  }
+//   System.Console.WriteLine("Negative : " + neg);
+//   System.Console.WriteLine("Positive : " + pos);
+//   System.Console.WriteLine("Zeros : " + zer);
+//   System.Console.WriteLine("Even : " + eve );
+//   System.Console.WriteLine("Odd : " + odd);
+//   System.Console.WriteLine("Max : " + max);
+//   System.Console.WriteLine("Min : " + min);
+//   System.Console.WriteLine("Sum of Digits : " + sum);
+
+//4
+// int n = int.Parse(Console.ReadLine());
+// int[] arr = new int[n];
+
+// for (int i = 0; i < n; i++)
+// {
+//     arr[i] = int.Parse(Console.ReadLine());
+// }
+
+// for (int i = 0; i < n; i += 2)
+// {
+//     Console.Write(arr[i] + " ");
+// }
+
+//5
+// int n = int.Parse(Console.ReadLine());
+// int[] arr = new int[n];
+
+// for (int i = 0; i < n; i++)
+// {
+//     arr[i] = int.Parse(Console.ReadLine());
+// }
+
+// int count = 0;
+// for (int i = 1; i < n; i++)
+// {
+//     if (arr[i] > arr[i - 1])
+//     {
+//         count++;
+//     }
+// }
+
+// Console.WriteLine(count);
+
+//6
+// int n = int.Parse(Console.ReadLine());
+// int[] arr = new int[n];
+
+// for (int i = 0; i < n; i++)
+// {
+//     arr[i] = int.Parse(Console.ReadLine());
+// }
+
+// for (int i = 0; i < n; i++)
+// {
+//     for (int j = 0; j < i; j++)
+//     {
+//         if (arr[j] == arr[i])
+//         {
+//             Ras = false;
+//         }
+//     }
+
+//     if (Ras == false)
+//     {
+//         continue;
+//     }
+//     int count = 0;
+//     for (int j = 0; j < n; j++)
+//     {
+//         if (arr[j] == arr[i])
+//         {
+//             count++;
+//         }
+//     }
+
+//     if (count > 1)
+//     {
+//         Console.Write(arr[i] + " ");
+//     }
 // }
 
 
-//task9
+//7
+
+// int x = int.Parse(Console.ReadLine());
+// int y = int.Parse(Console.ReadLine());
+
+// for(int i=x ; i<=y ; i++){
+//     for(int j=1 ; j<=10 ; j++){
+//         Console.WriteLine(i + " * " + j + " = "+ i * j);
+//     }
+// }
+
+//7
+// int a = int.Parse(Console.ReadLine());
+// char v  = char.Parse(Console.ReadLine());
+// int b = int.Parse(Console.ReadLine());
+
+// if(v == '+'){
+//     System.Console.WriteLine( a + " + " + b + " = " + (a+b));
+// }
+//  else if(v== '-'){
+//     System.Console.WriteLine( a + " - " + b + " = " + (a-b));
+//  }
+
+//  else if( v == '*'){
+//     System.Console.WriteLine( a + " * " + b + " = " + (a*b));
+//  }
+//   else if( v=='/'){
+//     System.Console.WriteLine(a + " / " + b + " = " + (a/b));
+//   }
+//   else{
+//     System.Console.WriteLine("NON");
+//   }
+ 
+
+
+ //8
+
+//  int a = int.Parse(Console.ReadLine());
+//  int b = int.Parse(Console.ReadLine());
+
+//  Console.WriteLine(Pow(a , b ));
+
+//  int Pow (int a , int b){
+//         if(b==0)return 1;
+//         if( b < 0) return 1 / Pow(a , -b);
+//         return a * Pow(a , b-1);
+//  }
+
+//9
+ int n = int.Parse(Console.ReadLine());
+
+for (int i = 0; i < n; i++)
+{
+    Console.Write(Fib(i) + " ");
+}
+
+int Fib(int k)
+{
+    if (k == 0) return 0;
+    if (k == 1) return 1;
+    return Fib(k - 1) + Fib(k - 2);
+}
+
+
+
+///
